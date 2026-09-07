@@ -54,14 +54,32 @@ const aboutFaqData = [
   },
 ];
 
+import { SchemaInjector } from "../common/SEO";
+
 const AboutFAQ = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": aboutFaqData.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <FAQSection
-      title="Common Questions About Our Company"
-      subtitle="About Us FAQ"
-      description="Learn more about ImageTech Industries, our history, manufacturing capabilities, and global presence."
-      faqs={aboutFaqData}
-    />
+    <>
+      <SchemaInjector schema={faqSchema} />
+      <FAQSection
+        title="Common Questions About Our Company"
+        subtitle="About Us FAQ"
+        description="Learn more about ImageTech Industries, our history, manufacturing capabilities, and global presence."
+        faqs={aboutFaqData}
+      />
+    </>
   );
 };
 

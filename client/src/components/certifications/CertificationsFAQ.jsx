@@ -56,14 +56,32 @@ const certificationsFaqData = [
   },
 ];
 
+import { SchemaInjector } from "../common/SEO";
+
 const CertificationsFAQ = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": certificationsFaqData.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <FAQSection
-      title="Understanding Our Quality Commitment"
-      subtitle="Certifications FAQ"
-      description="Find answers regarding our ISO standards, quality control processes, and material compliance."
-      faqs={certificationsFaqData}
-    />
+    <>
+      <SchemaInjector schema={faqSchema} />
+      <FAQSection
+        title="Understanding Our Quality Commitment"
+        subtitle="Certifications FAQ"
+        description="Find answers regarding our ISO standards, quality control processes, and material compliance."
+        faqs={certificationsFaqData}
+      />
+    </>
   );
 };
 

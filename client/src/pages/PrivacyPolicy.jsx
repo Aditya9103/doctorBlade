@@ -7,12 +7,19 @@ const PrivacyPolicy = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const privacySchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy | ImageTech Industries",
+    "description": "Privacy policy for ImageTech Industries. Read how we handle and protect your personal information."
+  };
+
   return (
     <>
       <SEO
         title="Privacy Policy | ImageTech Industries"
         description="Privacy policy for ImageTech Industries. Read how we handle and protect your personal information."
-        noindex={true}
+        schema={privacySchema}
       />
       <div className="bg-slate-50 min-h-screen py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

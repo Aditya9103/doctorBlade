@@ -500,22 +500,18 @@ const Footer = () => {
             >
               Privacy Policy
             </Link>
-            <a
-              href="https://www.imagetechindustries.com/terms-conditions"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/terms-and-conditions"
               className="hover:text-blue-600 transition-colors"
             >
               Terms & Conditions
-            </a>
-            <a
-              href="https://www.imagetechindustries.com/shipping-policy"
-              target="_blank"
-              rel="noopener noreferrer"
+            </Link>
+            <Link
+              to="/shipping-policy"
               className="hover:text-blue-600 transition-colors"
             >
               Shipping Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

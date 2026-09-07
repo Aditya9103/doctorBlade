@@ -9,6 +9,8 @@ import AboutUs from "./pages/AboutUs";
 import Certifications from "./pages/Certifications";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import ShippingPolicy from "./pages/ShippingPolicy";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import QuoteModal from "./components/common/QuoteModal";
@@ -73,6 +75,22 @@ function App() {
             element={
               <PublicLayout>
                 <PrivacyPolicy />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/terms-and-conditions"
+            element={
+              <PublicLayout>
+                <TermsConditions />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/shipping-policy"
+            element={
+              <PublicLayout>
+                <ShippingPolicy />
               </PublicLayout>
             }
           />

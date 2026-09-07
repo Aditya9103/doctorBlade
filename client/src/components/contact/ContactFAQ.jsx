@@ -54,14 +54,32 @@ const contactFaqData = [
   },
 ];
 
+import { SchemaInjector } from "../common/SEO";
+
 const ContactFAQ = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": contactFaqData.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <FAQSection
-      title="Got Questions? We Have Answers."
-      subtitle="Contact & Support FAQ"
-      description="Find quick answers regarding quotes, technical support, sample requests, and general communication."
-      faqs={contactFaqData}
-    />
+    <>
+      <SchemaInjector schema={faqSchema} />
+      <FAQSection
+        title="Got Questions? We Have Answers."
+        subtitle="Contact & Support FAQ"
+        description="Find quick answers regarding quotes, technical support, sample requests, and general communication."
+        faqs={contactFaqData}
+      />
+    </>
   );
 };
 

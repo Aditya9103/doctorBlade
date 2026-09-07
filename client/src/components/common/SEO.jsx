@@ -69,3 +69,22 @@ export default function SEO({
     </Helmet>
   );
 }
+
+/**
+ * Lightweight component to inject structured data (JSON-LD) without modifying other meta tags.
+ * Useful for deep components (like FAQs) that need to append schema to the page.
+ */
+export function SchemaInjector({ schema }) {
+  const schemaList = Array.isArray(schema) ? schema : schema ? [schema] : [];
+  if (schemaList.length === 0) return null;
+
+  return (
+    <Helmet>
+      {schemaList.map((schemaItem, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schemaItem)}
+        </script>
+      ))}
+    </Helmet>
+  );
+}
