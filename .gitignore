@@ -37,7 +37,7 @@ coverage/
 # OS files
 .DS_Store
 Thumbs.db
-
+*.txt
 # IDE files
 .vscode/
 .idea/
