@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import ContactHero from '../components/contact/ContactHero';
-import ContactInfo from '../components/contact/ContactInfo';
-import ContactForm from '../components/contact/ContactForm';
-import ContactFAQ from '../components/contact/ContactFAQ';
-import ContactFeatures from '../components/contact/ContactFeatures';
-import HomeCTA from '../components/home/HomeCTA';
+import React, { useEffect } from "react";
+import ContactHero from "../components/contact/ContactHero";
+import ContactInfo from "../components/contact/ContactInfo";
+import ContactForm from "../components/contact/ContactForm";
+import ContactFAQ from "../components/contact/ContactFAQ";
+import ContactFeatures from "../components/contact/ContactFeatures";
+import HomeCTA from "../components/home/HomeCTA";
 
 const ContactUs = () => {
   // Scroll to top when component mounts

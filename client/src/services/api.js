@@ -7,15 +7,18 @@ const BASE_URL = import.meta.env.VITE_API_URL;
  */
 export const submitQuote = async (payload) => {
   const res = await fetch(`${BASE_URL}/forms/quote`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
 
   const data = await res.json();
 
   if (!res.ok) {
-    const message = data.errors?.[0]?.msg || data.message || 'Something went wrong. Please try again.';
+    const message =
+      data.errors?.[0]?.msg ||
+      data.message ||
+    "Something went wrong. Please try again.";
     throw new Error(message);
   }
 
@@ -29,15 +32,18 @@ export const submitQuote = async (payload) => {
  */
 export const submitContact = async (payload) => {
   const res = await fetch(`${BASE_URL}/forms/contact`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
 
   const data = await res.json();
 
   if (!res.ok) {
-    const message = data.errors?.[0]?.msg || data.message || 'Something went wrong. Please try again.';
+    const message =
+      data.errors?.[0]?.msg ||
+      data.message ||
+    "Something went wrong. Please try again.";
     throw new Error(message);
   }
 
@@ -52,13 +58,13 @@ export const submitContact = async (payload) => {
  */
 export const adminLogin = async (username, password) => {
   const res = await fetch(`${BASE_URL}/auth/login`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
   });
 
   const data = await res.json();
-  if (!res.ok) throw new Error(data.message || 'Login failed.');
+  if (!res.ok) throw new Error(data.message || "Login failed.");
   return data;
 };
 
@@ -86,16 +92,16 @@ export const verifyToken = async (token) => {
  */
 export const fetchSubmissions = async (token, params = {}) => {
   const query = new URLSearchParams();
-  if (params.type) query.set('type', params.type);
-  if (params.isRead !== undefined) query.set('isRead', params.isRead);
-  if (params.page) query.set('page', params.page);
-  if (params.limit) query.set('limit', params.limit);
+  if (params.type) query.set("type", params.type);
+  if (params.isRead !== undefined) query.set("isRead", params.isRead);
+  if (params.page) query.set("page", params.page);
+  if (params.limit) query.set("limit", params.limit);
 
   const res = await fetch(`${BASE_URL}/admin/submissions?${query}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
 
-  if (!res.ok) throw new Error('Failed to fetch submissions.');
+  if (!res.ok) throw new Error("Failed to fetch submissions.");
   return res.json();
 };
 
@@ -107,7 +113,7 @@ export const fetchStats = async (token) => {
   const res = await fetch(`${BASE_URL}/admin/stats`, {
     headers: { Authorization: `Bearer ${token}` },
   });
-  if (!res.ok) throw new Error('Failed to fetch stats.');
+  if (!res.ok) throw new Error("Failed to fetch stats.");
   return res.json();
 };
 
@@ -119,14 +125,14 @@ export const fetchStats = async (token) => {
  */
 export const markSubmissionRead = async (token, id, isRead) => {
   const res = await fetch(`${BASE_URL}/admin/submissions/${id}/read`, {
-    method: 'PATCH',
+    method: "PATCH",
     headers: {
-      'Content-Type': 'application/json',
+    "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ isRead }),
   });
-  if (!res.ok) throw new Error('Failed to update submission.');
+  if (!res.ok) throw new Error("Failed to update submission.");
   return res.json();
 };
 
@@ -137,9 +143,9 @@ export const markSubmissionRead = async (token, id, isRead) => {
  */
 export const deleteSubmission = async (token, id) => {
   const res = await fetch(`${BASE_URL}/admin/submissions/${id}`, {
-    method: 'DELETE',
+    method: "DELETE",
     headers: { Authorization: `Bearer ${token}` },
   });
-  if (!res.ok) throw new Error('Failed to delete submission.');
+  if (!res.ok) throw new Error("Failed to delete submission.");
   return res.json();
 };
