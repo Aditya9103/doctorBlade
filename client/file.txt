@@ -1,8 +1,0 @@
-
-Terms & Conditions=https://www.imagetechindustries.com/terms-conditions
-Shipping Policy=https://www.imagetechindustries.com/shipping-policy
-Doctor Blades=https://www.imagetechindustries.com/products?category=doctor-blades
-Wipex Carbon Steel Doctor Blade=https://www.imagetechindustries.com/products/wipex-carbon-steel-doctor-blade
-WIPEX Polymer Doctor Blade =https://www.imagetechindustries.com/products/wipex-polymer-doctor-blade
-Products=https://www.imagetechindustries.com/products
-logo = https://www.imagetechindustries.com
