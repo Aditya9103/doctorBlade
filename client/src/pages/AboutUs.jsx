@@ -7,24 +7,43 @@ import AboutGlobalPresence from "../components/about/AboutGlobalPresence";
 import HomeCertifications from "../components/home/HomeCertifications";
 import AboutFAQ from "../components/about/AboutFAQ";
 import HomeCTA from "../components/home/HomeCTA";
+import SEO from "../components/common/SEO";
 
 const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "About Us | ImageTech Industries";
   }, []);
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About ImageTech Industries",
+    "description": "Learn about ImageTech Industries, a leading manufacturer of Doctor Blades in India with over 30 years of experience.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ImageTech Industries"
+    }
+  };
+
   return (
-    <main>
-      <AboutStory />
-      <AboutCapabilities />
-      <AboutValues />
-      <AboutVisionMission />
-      <HomeCertifications />
-      <AboutGlobalPresence />
-      <AboutFAQ />
-      <HomeCTA />
-    </main>
+    <>
+      <SEO 
+        title="About Us | ImageTech Industries"
+        description="Learn about ImageTech Industries, a trusted manufacturer of Doctor Blades in Delhi, India. Discover our history, manufacturing capabilities, and global presence."
+        keywords={['about imagetech industries', 'doctor blade manufacturer history', 'best doctor blade in delhi', 'printing blade supplier']}
+        schema={aboutSchema}
+      />
+      <main>
+        <AboutStory />
+        <AboutCapabilities />
+        <AboutValues />
+        <AboutVisionMission />
+        <HomeCertifications />
+        <AboutGlobalPresence />
+        <AboutFAQ />
+        <HomeCTA />
+      </main>
+    </>
   );
 };
 
