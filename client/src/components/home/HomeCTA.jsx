@@ -51,7 +51,7 @@ const HomeCTA = () => {
         {/* Decorative Image Overlap */}
         <div className="absolute top-1/2 -translate-y-1/2 right-10 lg:right-40 w-1/2 max-w-[600px] opacity-10 pointer-events-none z-10 mix-blend-screen scale-150">
           <img
-            src="/heroimage.png"
+            src="/heroimage.webp"
             alt="Doctor Blade"
             className="w-full h-auto object-contain"
           />

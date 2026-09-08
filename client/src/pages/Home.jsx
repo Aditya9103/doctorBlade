@@ -34,7 +34,7 @@ const Home = () => {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Doctor Blade",
-    "image": "https://doctorblade.co.in/heroimage.png",
+    "image": "https://doctorblade.co.in/heroimage.webp",
     "description": "The best doctor blade in Delhi, India. Premium carbon steel, stainless steel, and polymer doctor blades for flexographic and rotogravure printing.",
     "brand": {
       "@type": "Brand",

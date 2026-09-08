@@ -126,7 +126,7 @@ const ContactHero = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent z-10 w-1/3"></div>
 
           <img
-            src="/heroimage.png"
+            src="/heroimage.webp"
             alt="ImageTech Products"
             className="w-full h-full object-cover object-left opacity-90 mix-blend-multiply"
           />

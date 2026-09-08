@@ -203,8 +203,10 @@ const HomeHero = () => {
           {/* Right Container for Image and Badges */}
           <div className="relative mt-12 lg:mt-0 flex justify-center items-center h-full min-h-[300px] lg:min-h-full">
             <img
-              src="/heroimage.png"
+              src="/heroimage.webp"
               alt="WipeX Plus Doctor Blade"
+              fetchpriority="high"
+              loading="eager"
               className="relative z-10 w-full max-w-2xl scale-[1.35] -translate-x-12 object-contain drop-shadow-2xl"
             />
 
