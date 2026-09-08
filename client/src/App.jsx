@@ -11,6 +11,7 @@ import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import ShippingPolicy from "./pages/ShippingPolicy";
+import ProductDetail from "./pages/ProductDetail";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import QuoteModal from "./components/common/QuoteModal";
@@ -91,6 +92,14 @@ function App() {
             element={
               <PublicLayout>
                 <ShippingPolicy />
+              </PublicLayout>
+            }
+          />
+          <Route
+            path="/products/:slug"
+            element={
+              <PublicLayout>
+                <ProductDetail />
               </PublicLayout>
             }
           />

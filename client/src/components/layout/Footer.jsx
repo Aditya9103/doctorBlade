@@ -115,7 +115,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/#about"
+                  to="/about"
                   className="hover:text-blue-600 flex items-center transition-colors"
                 >
                   <svg
@@ -133,29 +133,6 @@ const Footer = () => {
                   </svg>
                   About Us
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="https://www.imagetechindustries.com/products"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-600 flex items-center transition-colors"
-                >
-                  <svg
-                    className="w-3 h-3 text-blue-500 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                  Products
-                </a>
               </li>
               <li>
                 <Link
@@ -199,6 +176,27 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/certifications"
+                  className="hover:text-blue-600 flex items-center transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                  Certifications
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -209,10 +207,8 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 text-sm text-gray-900 font-bold font-semibold">
               <li>
-                <a
-                  href="https://www.imagetechindustries.com/products?category=doctor-blades"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/products/wipex-carbon-steel-doctor-blade"
                   className="hover:text-blue-600 flex items-start transition-colors"
                 >
                   <svg
@@ -221,21 +217,14 @@ const Footer = () => {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>Doctor Blades</span>
-                </a>
+                  <span>Carbon Steel Doctor Blades</span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.imagetechindustries.com/products/wipex-carbon-steel-doctor-blade"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/products/wipex-stainless-steel-doctor-blade"
                   className="hover:text-blue-600 flex items-start transition-colors"
                 >
                   <svg
@@ -244,21 +233,14 @@ const Footer = () => {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>Wipex Carbon Steel Doctor Blade</span>
-                </a>
+                  <span>Stainless Steel Doctor Blades</span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.imagetechindustries.com/products/wipex-polymer-doctor-blade"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/products/wipex-polymer-doctor-blade"
                   className="hover:text-blue-600 flex items-start transition-colors"
                 >
                   <svg
@@ -267,15 +249,26 @@ const Footer = () => {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                   </svg>
-                  <span>WIPEX Polymer Doctor Blade</span>
-                </a>
+                  <span>Polymer Doctor Blades</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/products/custom-size-slit-blades"
+                  className="hover:text-blue-600 flex items-start transition-colors"
+                >
+                  <svg
+                    className="w-3 h-3 text-blue-500 mr-2 mt-1 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>Custom Size & Slit Blades</span>
+                </Link>
               </li>
             </ul>
           </div>
