@@ -3,24 +3,24 @@ import React from "react";
 const articles = [
   {
     id: 1,
-    title: "How to Choose the Right Doctor Blade for Your Application",
+    title: "How to Choose the Right Doctor Blade for Your Printing Needs",
     date: "Mar 15, 2024",
     category: "Technical Guide",
-    image: "/CARBON STEEL  AND STAINLESS STEEL/226.jpg", // Using a product image as placeholder
+    image: "/MAGNETIC_INK_MIXING_ROLLER/INK METERING ROLLER WITH ROPE/204.jpg",
   },
   {
     id: 2,
-    title: "Improving Print Quality with the Right Doctor Blade",
+    title: "Improving Printing Efficiency with Doctor Blades",
     date: "Feb 28, 2024",
     category: "Industry Insight",
-    image: "/doctorbladebg.png", // Placeholder
+    image: "/MAGNETIC_INK_MIXING_ROLLER/INK METERING ROLLER ROPE FREE/216.jpg",
   },
   {
     id: 3,
-    title: "Advancements in Polymer Doctor Blades",
+    title: "Advancements in Uniform Ink Viscosity Control",
     date: "Jan 15, 2024",
     category: "Product Update",
-    image: "/POLYMER BLADE/227.jpg", // Placeholder
+    image: "/MAGNETIC_INK_MIXING_ROLLER/INK METERING ROLLER WITH ROPE/207.jpg",
   },
 ];
 

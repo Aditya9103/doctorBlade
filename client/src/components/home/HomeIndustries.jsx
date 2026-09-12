@@ -27,7 +27,8 @@ const industries = [
   },
 ];
 
-const HomeIndustries = () => {
+const HomeIndustries = ({ locationData }) => {
+  const locName = locationData ? locationData.name : "";
   return (
     <section className="py-16 lg:py-24 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,12 +39,11 @@ const HomeIndustries = () => {
               Industries We Serve
             </h4>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6">
-              Supporting Diverse Industries with Reliable Solutions
+              Supporting Diverse Industries with Reliable Solutions {locName ? `in ${locName}` : ''}
             </h2>
             <p className="text-lg text-gray-900 mb-10">
-              Our doctor blades are widely used across various industries to
-              ensure quality, efficiency and reliability in printing, coating
-              and industrial processes.
+              Our Doctor Blades are widely used across various industries to
+              ensure consistent ink metering, efficiency and reliability in printing and packaging processes.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-8">
@@ -152,10 +152,10 @@ const HomeIndustries = () => {
                   </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 text-sm mb-1">
-                  Higher Print Quality
+                  Uniform Ink Metering
                 </h4>
                 <p className="text-xs text-gray-900">
-                  Cleaner output with consistent ink control.
+                  Ensure consistent ink application across substrates.
                 </p>
               </div>
               <div className="text-center">
@@ -175,10 +175,10 @@ const HomeIndustries = () => {
                   </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 text-sm mb-1">
-                  Less Downtime
+                  Highly Accurate
                 </h4>
                 <p className="text-xs text-gray-900">
-                  Reliable performance for uninterrupted production.
+                  Reliable results for consistent print quality.
                 </p>
               </div>
               <div className="text-center">
@@ -198,10 +198,10 @@ const HomeIndustries = () => {
                   </svg>
                 </div>
                 <h4 className="font-bold text-gray-900 text-sm mb-1">
-                  Greater Efficiency
+                  Printing Efficiency
                 </h4>
                 <p className="text-xs text-gray-900">
-                  Optimized for high-speed printing operations.
+                  Optimized for fast and reliable press runs.
                 </p>
               </div>
             </div>

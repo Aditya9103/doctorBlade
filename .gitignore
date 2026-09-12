@@ -57,3 +57,7 @@ uploads/
 
 # Optional stylelint cache
 .stylelintcache
+
+# Local Reference & Scratch
+refrence/
+patch_home.js

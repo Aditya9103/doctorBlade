@@ -1,6 +1,7 @@
 import React from "react";
 
-const HomeHero = () => {
+const HomeHero = ({ locationData }) => {
+  const locName = locationData ? locationData.name : "India";
   return (
     <div className="relative bg-gradient-to-r from-blue-50 to-white overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24">
       {/* Background decoration */}
@@ -22,16 +23,15 @@ const HomeHero = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-gray-900 leading-tight">
               Best <span className="text-blue-600">Doctor Blade</span> <br />
               <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-gray-900 font-bold">
-                Manufacturer in India
+                Manufacturer in {locName}
               </span>
             </h1>
 
             <p className="text-lg text-gray-900 max-w-xl">
-              ImageTech Industries is widely recognized for producing the best
-              doctor blade in Delhi and across India. We manufacture premium
-              Carbon Steel, Stainless Steel, and Polymer doctor blades that
-              ensure flawless ink control and longer machine life for printing
-              and packaging applications.
+              ImageTech Industries is widely recognized for manufacturing the best
+              Doctor Blades in {locationData ? `${locName} and across India` : 'Delhi and across India'}. We offer premium
+              doctor blades that ensure uniform ink metering and consistent print quality for
+              gravure and flexographic printing applications.
             </p>
 
             <div className="flex flex-row gap-2 sm:gap-4 overflow-x-auto hide-scrollbar pb-1">
@@ -204,10 +204,11 @@ const HomeHero = () => {
           <div className="relative mt-12 lg:mt-0 flex justify-center items-center h-full min-h-[300px] lg:min-h-full">
             <img
               src="/heroimage.webp"
-              alt="WipeX Plus Doctor Blade"
-              fetchpriority="high"
+              alt="Doctor Blade Device"
+              fetchPriority="high"
               loading="eager"
-              className="relative z-10 w-full max-w-2xl scale-[1.35] -translate-x-12 object-contain drop-shadow-2xl"
+              decoding="sync"
+              className="relative z-10 w-full max-w-2xl scale-[1.1] translate-x-0 md:-translate-x-8 lg:-translate-x-12 -translate-y-24 object-contain drop-shadow-2xl rounded-2xl"
             />
 
             {/* Side Floating Badges - Expanding on Hover */}
@@ -229,7 +230,7 @@ const HomeHero = () => {
                   </svg>
                 </div>
                 <span className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-2 transition-all duration-500 ease-in-out whitespace-nowrap text-xs font-semibold tracking-wide flex items-center">
-                  <span className="pr-3">CLEANER PRINTS</span>
+                  <span className="pr-3">UNIFORM INK METERING</span>
                 </span>
               </div>
 
@@ -256,7 +257,7 @@ const HomeHero = () => {
                   </svg>
                 </div>
                 <span className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-2 transition-all duration-500 ease-in-out whitespace-nowrap text-xs font-semibold tracking-wide flex items-center">
-                  <span className="pr-3">SHARPER DETAILS</span>
+                  <span className="pr-3">PRINT CONSISTENCY</span>
                 </span>
               </div>
 
@@ -277,7 +278,7 @@ const HomeHero = () => {
                   </svg>
                 </div>
                 <span className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-2 transition-all duration-500 ease-in-out whitespace-nowrap text-xs font-semibold tracking-wide flex items-center">
-                  <span className="pr-3">LONGER MACHINE LIFE</span>
+                  <span className="pr-3">QUALITY CONTROL</span>
                 </span>
               </div>
 
@@ -298,7 +299,7 @@ const HomeHero = () => {
                   </svg>
                 </div>
                 <span className="max-w-0 overflow-hidden opacity-0 group-hover:max-w-[200px] group-hover:opacity-100 group-hover:ml-2 transition-all duration-500 ease-in-out whitespace-nowrap text-xs font-semibold tracking-wide flex items-center">
-                  <span className="pr-3">CONSISTENT PERFORMANCE</span>
+                  <span className="pr-3">PRECISION RESULTS</span>
                 </span>
               </div>
             </div>

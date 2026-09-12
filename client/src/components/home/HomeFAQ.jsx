@@ -109,27 +109,29 @@ const faqData = [
 
 import { SchemaInjector } from "../common/SEO";
 
-const HomeFAQ = () => {
+const HomeFAQ = ({ locationData }) => {
+  const locName = locationData ? locationData.name : "";
+  
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.map((faq) => ({
+    mainEntity: faqData.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
+      name: faq.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
     <>
       <SchemaInjector schema={faqSchema} />
       <FAQSection
-        title="Everything You Need To Know About Doctor Blades"
+        title={`Everything You Need To Know About Doctor Blades ${locName ? 'in ' + locName : ''}`}
         subtitle="Frequently Asked Questions"
-        description="Find answers to common questions about our industrial products, applications, manufacturing capabilities, and technical support."
+        description={`Find answers to common questions about our Doctor Blades, printing applications, and technical specifications ${locName ? 'in ' + locName : ''}.`}
         faqs={faqData}
       />
     </>

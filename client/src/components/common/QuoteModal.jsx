@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { submitQuote } from "../../services/api";
+import { useSubmitQuote } from "../../services/api";
 
 const QuoteModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errorMsg, setErrorMsg] = useState("");
   const formRef = useRef(null);
+  const mutation = useSubmitQuote();
 
   useEffect(() => {
     const handleOpen = () => {
@@ -40,7 +41,7 @@ const QuoteModal = () => {
     };
 
     try {
-      await submitQuote(payload);
+      await mutation.mutateAsync(payload);
       setStatus("success");
       formRef.current?.reset();
     } catch (err) {

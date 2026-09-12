@@ -1,10 +1,12 @@
 import React, { useState, useRef } from "react";
-import { submitContact } from "../../services/api";
+import { useSubmitContact } from "../../services/api";
 
 const ContactForm = () => {
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
   const [errorMsg, setErrorMsg] = useState("");
   const formRef = useRef(null);
+  
+  const mutation = useSubmitContact();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +25,7 @@ const ContactForm = () => {
     };
 
     try {
-      await submitContact(payload);
+      await mutation.mutateAsync(payload);
       setStatus("success");
       formRef.current?.reset();
     } catch (err) {
