@@ -85,7 +85,7 @@ const SidebarView = ({ admin, locationPath, onNavigate, onLogout }) => {
           </div>
           <div>
             <p className="text-white font-extrabold text-sm leading-tight">
-              Ink Mixing Roller
+              Doctor Blade
             </p>
             <p className="text-slate-50 text-xs font-medium">Admin Panel</p>
           </div>
@@ -105,11 +105,10 @@ const SidebarView = ({ admin, locationPath, onNavigate, onLogout }) => {
               to={item.path}
               onClick={onNavigate}
               onMouseEnter={() => handlePrefetch(item.path)}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                active
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold transition-all ${active
                   ? "bg-blue-600 text-white shadow-md shadow-blue-900/30"
                   : "text-white hover:bg-white/8"
-              }`}
+                }`}
             >
               {item.icon}
               {item.label}
@@ -163,7 +162,7 @@ const AdminLayout = ({ children, title, subtitle }) => {
         <SidebarView
           admin={admin}
           locationPath={location.pathname}
-          onNavigate={() => {}}
+          onNavigate={() => { }}
           onLogout={handleLogout}
         />
       </aside>
