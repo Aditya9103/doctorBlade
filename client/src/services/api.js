@@ -423,7 +423,8 @@ export const useAdminStats = (token, options = {}) => {
     queryFn: () => fetchStats(token),
     enabled: !!token,
     staleTime: 1000 * 60 * 5, // 5 minutes fresh
-    refetchOnWindowFocus: false,
+    refetchOnWindowFocus: true, // Auto refetch when admin switches tabs back
+    refetchOnMount: true, // Always fetch latest when opening/refreshing page
     ...options,
   });
 };
@@ -435,7 +436,8 @@ export const useAdminSubmissions = (token, params = {}, options = {}) => {
     queryFn: () => fetchSubmissions(token, params),
     enabled: !!token,
     staleTime: 1000 * 60 * 2, // 2 minutes fresh
-    refetchOnWindowFocus: false,
+    refetchOnWindowFocus: true, // Auto refetch when admin switches tabs back
+    refetchOnMount: true, // Always fetch latest when opening/refreshing page
     placeholderData: keepPreviousData,
     ...options,
   });
